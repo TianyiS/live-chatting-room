@@ -1,6 +1,7 @@
 // import React , { useState } from 'react';
 import useLocalStorage from '../hooks/useLocalStorage';
 import Login from './login';
+import DashBoard from './dashBoard';
 
 function App() {
 
@@ -8,8 +9,7 @@ function App() {
 
   return (
     <>
-    {id}
-    <Login onIdSubmit={setId} ></Login>
+      {id ? <DashBoard id={id}/> : <Login onIdSubmit={setId} />}
     </>
   );
 }
