@@ -1,7 +1,16 @@
+// import React , { useState } from 'react';
+import useLocalStorage from '../hooks/useLocalStorage';
+import Login from './login';
 
 function App() {
+
+  const [id, setId] = useLocalStorage('id')
+
   return (
-    'Online Chatting Room Boilerplate'
+    <>
+    {id}
+    <Login onIdSubmit={setId} ></Login>
+    </>
   );
 }
 
