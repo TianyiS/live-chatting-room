@@ -3,14 +3,13 @@ import OpenConversation from './openConversation'
 import SideBar from './sideBar'
 import { useConversations } from '../contexts/conversationsProvider'
 
-export default function DashBoard({id}) {
-
+export default function Dashboard({ id }) {
     const { selectedConversation } = useConversations()
-
+  
     return (
-        <div className="d-flex" style={{height: '100vh'}}>
-            <SideBar id={id}/>
-            {selectedConversation && <OpenConversation />}
-        </div>
+      <div className="d-flex" style={{ height: '100vh' }}>
+        <SideBar id={id} />
+        {selectedConversation && <OpenConversation />}
+      </div>
     )
-}
+  }
